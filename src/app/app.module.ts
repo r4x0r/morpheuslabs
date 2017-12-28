@@ -18,7 +18,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    NbThemeModule.forRoot({ name: 'default' }),
+    NbThemeModule.forRoot({ name: 'morpheustheme' }),
     RouterModule.forRoot(routes)
   ],
   providers: [],
