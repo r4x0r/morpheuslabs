@@ -14,8 +14,13 @@ $nb-themes: nb-register-theme((
   font-main: Roboto,
   font-secondary: Exo,
 
+  /*HEADER*/
+  header-height: 4.75rem,
 
-  // Menu sidebar
-  menu-bg: #222,
+  /*SIDEBAR*/
+  sidebar-bg: #70e1e1,
+
+  // Menu item
+  menu-bg: #70e1e1,
 ), morpheustheme, default);
 

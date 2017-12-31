@@ -4,7 +4,8 @@ import { NbMenuItem } from '@nebular/theme';
 
 @Component({
   selector: 'ml-pages',
-  templateUrl: './pages.component.html'
+  templateUrl: './pages.component.html',
+  styleUrls:['./pages.component.scss']
 })
 export class PagesComponent {
 
@@ -17,7 +18,7 @@ export class PagesComponent {
     },
     {
       title: 'Membership',
-      icon: 'nb-home',
+      icon: 'fa-address-book-o',
       link: '/pages/membership'
     }
   ]

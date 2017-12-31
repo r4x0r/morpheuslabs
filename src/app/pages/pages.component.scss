@@ -1,0 +1,15 @@
+@import '../@theme/themes';
+
+:host 
+{
+  nb-layout-column
+  {
+    padding: 0 !important;
+  }
+  
+  .content_display
+  {
+    margin-top: nb-theme(header-height);
+    padding: nb-theme(layout-padding);
+  } 
+}

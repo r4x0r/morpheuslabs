@@ -10,15 +10,4 @@ import { NbMenuItem } from '@nebular/theme';
 export class AppComponent {
   title = 'app';
 
-  menu = [  
-  {
-    title: 'Dashboard',
-    icon: 'nb-home',
-    link: '/pages/dashboard',
-    home: true,
-  },
-  {
-    title: 'FEATURES',
-    group: true,
-  }]
 }

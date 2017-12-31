@@ -7,6 +7,8 @@ import { NbSidebarModule, NbLayoutModule, NbSidebarService, NbMenuModule, NbMenu
 
 import { PagesComponent } from './pages.component';
 
+import { MlheaderComponent } from './mlheader/mlheader.component';
+
 import { DashboardModule } from './dashboard/dashboard.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
@@ -50,7 +52,8 @@ const routes: Routes = [{
     MembershipModule
   ],
   declarations: [
-    PagesComponent
+    PagesComponent,
+    MlheaderComponent
   ],
   providers: [NbSidebarService, NbMenuService]
 })

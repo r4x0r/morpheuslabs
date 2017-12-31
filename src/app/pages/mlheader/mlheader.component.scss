@@ -1,0 +1,15 @@
+@import '../../@theme/themes';
+
+:host 
+{
+  .header
+  {
+    height:nb-theme(header-height);
+    background: white;
+
+    padding: 0;
+    display: flex;
+    position: fixed;
+  }
+}
+
