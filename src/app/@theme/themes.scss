@@ -3,6 +3,9 @@
 // @nebular out of the box themes
 @import '~@nebular/theme/styles/themes/default';
 
+// Import colours
+@import './_colours';
+
 // which themes you what to enable (empty to enable all)
 $nb-enabled-themes: (default, morpheustheme);
 
@@ -18,9 +21,17 @@ $nb-themes: nb-register-theme((
   header-height: 4.75rem,
 
   /*SIDEBAR*/
-  sidebar-bg: #70e1e1,
+  sidebar-bg: $primary-blue,
 
   // Menu item
-  menu-bg: #70e1e1,
+  menu-group-fg: white,
+  menu-fg: white,
+  menu-bg: $primary-blue,
+  menu-active-fg: white,
+  menu-active-bg: $secondary-blue,
+  menu-icon-color: white,
+  menu-icon-active-color: white
+
+
 ), morpheustheme, default);
 

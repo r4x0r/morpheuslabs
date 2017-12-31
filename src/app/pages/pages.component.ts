@@ -16,13 +16,33 @@ export class PagesComponent {
     }
     {
       title: 'Dashboard',
-      icon: 'fa-tachometer',
+      icon: 'nb-layout-default',
       link: '/pages/dashboard',
       home: true,
     },
     {
       title: 'Membership',
-      icon: 'fa-address-book-o',
+      icon: 'nb-person',
+      link: '/pages/membership'
+    },
+    {
+      title: 'Team',
+      icon: 'nb-person',
+      link: '/pages/membership'
+    },
+    {
+      title: 'Technical Support',
+      icon: 'nb-person',
+      link: '/pages/membership'
+    },
+    {
+      title: 'Application Library',
+      icon: 'nb-person',
+      link: '/pages/membership'
+    },
+    {
+      title: 'API Library',
+      icon: 'nb-person',
       link: '/pages/membership'
     }
   ]

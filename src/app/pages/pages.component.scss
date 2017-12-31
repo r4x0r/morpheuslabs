@@ -12,4 +12,9 @@
     margin-top: nb-theme(header-height);
     padding: nb-theme(layout-padding);
   } 
+
+  .menu-group
+  {
+    background: $secondary-blue !important;
+  }
 }
