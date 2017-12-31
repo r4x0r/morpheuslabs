@@ -11,6 +11,10 @@ export class PagesComponent {
 
   menu: NbMenuItem[] = [
     {
+      title: 'Program Resources',
+      group: true,
+    }
+    {
       title: 'Dashboard',
       icon: 'fa-tachometer',
       link: '/pages/dashboard',
