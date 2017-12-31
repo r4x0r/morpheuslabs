@@ -30,7 +30,8 @@ $nb-themes: nb-register-theme((
   menu-active-fg: white,
   menu-active-bg: $secondary-blue,
   menu-icon-color: white,
-  menu-icon-active-color: white
+  menu-icon-active-color: white,
+  menu-item-separator: $secondary-blue,
 
 
 ), morpheustheme, default);
