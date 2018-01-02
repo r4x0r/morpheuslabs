@@ -7,13 +7,16 @@ import { NbSidebarModule, NbLayoutModule, NbSidebarService, NbMenuModule, NbMenu
 
 import { PagesComponent } from './pages.component';
 
-import { MlheaderComponent } from './mlheader/mlheader.component';
+import { MlheaderComponent } from './pagescomponents/mlheader/mlheader.component';
+import { MlsidebarComponent } from './pagescomponents/mlsidebar/mlsidebar.component';
+import { ProfilepicComponent } from './pagescomponents/mlsidebar/profilepic/profilepic.component';
 
 import { DashboardModule } from './dashboard/dashboard.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { MembershipModule } from './membership/membership.module';
 import { MembershipComponent } from './membership/membership.component';
+
 
 const routes: Routes = [{
   path: '',
@@ -30,7 +33,7 @@ const routes: Routes = [{
     path: '',
     redirectTo: 'dashboard',
     pathMatch: 'full',
-  }, 
+  }
   // {
   //   path: 'ui-features',
   //   loadChildren: './ui-features/ui-features.module#UiFeaturesModule',
@@ -53,7 +56,9 @@ const routes: Routes = [{
   ],
   declarations: [
     PagesComponent,
-    MlheaderComponent
+    MlheaderComponent,
+    MlsidebarComponent,
+    ProfilepicComponent
   ],
   providers: [NbSidebarService, NbMenuService]
 })

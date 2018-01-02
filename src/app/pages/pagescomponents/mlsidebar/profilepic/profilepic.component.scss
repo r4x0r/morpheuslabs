@@ -1,0 +1,17 @@
+@import '../../../../@theme/themes';
+
+:host 
+{
+  .profile-pic
+  {
+    max-width:3rem;
+  }
+
+  .profile-name
+  {
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 0.625rem;
+  }
+}

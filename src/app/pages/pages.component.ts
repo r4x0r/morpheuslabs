@@ -13,7 +13,7 @@ export class PagesComponent {
     {
       title: 'Program Resources',
       group: true,
-    }
+    },
     {
       title: 'Dashboard',
       icon: 'nb-layout-default',
