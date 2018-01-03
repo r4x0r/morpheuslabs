@@ -11,7 +11,7 @@ export class PagesComponent {
 
   menu: NbMenuItem[] = [
     {
-      title: 'Program Resources',
+      title: 'PROGRAM RESOURCES',
       group: true,
     },
     {
@@ -46,7 +46,7 @@ export class PagesComponent {
       link: '/pages/membership'
     },
     {
-      title: 'Other Resources',
+      title: 'OTHER RESOURCES',
       group: true,
     },
     {
