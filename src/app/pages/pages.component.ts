@@ -44,6 +44,25 @@ export class PagesComponent {
       title: 'API Library',
       icon: 'nb-person',
       link: '/pages/membership'
+    },
+    {
+      title: 'Other Resources',
+      group: true,
+    },
+    {
+      title: 'Forumy',
+      icon: 'nb-person',
+      link: '/pages/membership'
+    },
+    {
+      title: 'Bug Reporter',
+      icon: 'nb-person',
+      link: '/pages/membership'
+    },
+    {
+      title: 'News & Reporter',
+      icon: 'nb-person',
+      link: '/pages/membership'
     }
   ]
 }

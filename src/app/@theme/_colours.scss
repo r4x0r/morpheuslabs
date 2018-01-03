@@ -1,3 +1,4 @@
 /* COLOURS */
-$primary-blue: #00BFFF;
-$secondary-blue: #00688B;
+$primary-blue: hsl(197,62.2,46.7);
+$secondary-blue: darken($primary-blue, 5%);
+$dark-blue: #1B81A9;
