@@ -11,4 +11,11 @@
   // framework global styles
   @include nb-theme-global();
 
+  // global styles
+  nb-menu .menu-group
+  {
+    background: $dark-blue;
+  }
 };
+
+

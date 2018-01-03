@@ -50,7 +50,7 @@ export class PagesComponent {
       group: true,
     },
     {
-      title: 'Forumy',
+      title: 'Forum',
       icon: 'nb-person',
       link: '/pages/membership'
     },
