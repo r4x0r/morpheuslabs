@@ -10,9 +10,11 @@
 $nb-enabled-themes: (default, morpheustheme);
 
 $nb-themes: nb-register-theme((
+
  // app wise variables for each theme
   sidebar-header-height: initial,
   layout-content-width: 1400px,
+  design-window-width: 1024px,
 
   font-main: Roboto,
   font-secondary: Exo,
@@ -33,6 +35,17 @@ $nb-themes: nb-register-theme((
   menu-icon-active-color: white,
   menu-item-separator: $secondary-blue,
 
+  // Dashboard
+  dashboard-bg: $primary-gray,
+  dashboard-item-bg: white,
+  dashboard-item-text-color: $dark-gray,
+  dashboard-item-border-color: $secondary-gray,
+  dashboard-item-font-size: 14px,
+  dashboard-list-title-color: $primary-blue,
+  dashboard-list-title-font-size: 16px,
+  dashboard-list-text-color: $light-gray,
+  dashboard-list-text-font-size: 12px,
+  dashboard-section-btm-margin: 30px,
 
 ), morpheustheme, default);
 

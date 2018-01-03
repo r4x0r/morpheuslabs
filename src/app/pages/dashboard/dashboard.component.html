@@ -1,1 +1,27 @@
-<div>Dashboard Component</div>
+<app-list-header
+    [type] = "workspace"
+    [title] = "'Cloud IDE Workspace'"
+    [description] = "'Nullam et ante id erat suscript porta'"
+    (onPlusBtnClicked) = "addListItem('workspace')"
+></app-list-header>
+<app-workspace-list
+    [workspaceList] = "workspaceList"
+></app-workspace-list>
+<app-list-header
+    [type] = "repo"
+    [title] = "'Git Repositories'"
+    [description] = "'Nullam et ante id erat suscript porta'"
+    (onPlusBtnClicked) = "addListItem('repo')"
+></app-list-header>
+<app-repo-list
+    [repoList] = "repoList"
+></app-repo-list>
+<app-list-header
+    [type] = "sample-repo"
+    [title] = "'Sample Repositories'"
+    [description] = "'Nullam et ante id erat suscript porta'"
+    (onPlusBtnClicked) = "addListItem('sample-repo')"
+></app-list-header>
+<app-repo-list
+    [repoList] = "sampleRepoList"
+></app-repo-list>
