@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NbMenuService, NbSidebarService } from '@nebular/theme';
 
 @Component({
   selector: 'ml-header',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MlheaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private sidebarService: NbSidebarService,
+    private menuService: NbMenuService) { }
 
   ngOnInit() {
+  }
+
+  toggleSidebar(): boolean {
+    this.sidebarService.toggle(true, 'menu-sidebar');
+    return false;
   }
 
 }
