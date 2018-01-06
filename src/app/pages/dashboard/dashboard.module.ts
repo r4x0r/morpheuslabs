@@ -5,10 +5,10 @@ import { NbThemeModule } from '@nebular/theme';
 import { DashboardComponent } from './dashboard.component';
 import { WorkspaceListComponent } from './workspace-list/workspace-list.component';
 import { RepoListComponent } from './repo-list/repo-list.component';
-import { SampleRepoListComponent } from './sample-repo-list/sample-repo-list.component';
 import { WorkspaceItemComponent } from './workspace-list/workspace-item/workspace-item.component';
 import { ListHeaderComponent } from './list-header/list-header.component';
 import { RepoItemComponent } from './repo-list/repo-item/repo-item.component';
+import { WorkspacePopoverComponent } from './workspace-list/workspace-popover/workspace-popover.component';
 
 @NgModule({
   imports: [
@@ -19,10 +19,10 @@ import { RepoItemComponent } from './repo-list/repo-item/repo-item.component';
     DashboardComponent,
     WorkspaceListComponent,
     RepoListComponent,
-    SampleRepoListComponent,
     WorkspaceItemComponent,
     ListHeaderComponent,
-    RepoItemComponent
+    RepoItemComponent,
+    WorkspacePopoverComponent,
   ]
 })
 export class DashboardModule { }

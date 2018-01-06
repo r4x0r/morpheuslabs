@@ -1,0 +1,90 @@
+@import '../../../../@theme/themes';
+
+:host{
+    .container-fluid{
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        background: $tsp-black;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .popover-container-1, .popover-container-2, .popover-container-3{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: white;
+        padding: 40px;
+        border-radius: 5px;
+    }
+
+    .popover-container-1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: white;
+        padding-left: 60px;
+        padding-right: 60px;
+        border-radius: 5px;
+    }
+
+    .title{
+        color:$primary-blue;
+        font-size: 16px;
+    }
+
+    .desc{
+        color: $light-gray;
+        font-size: 12px;
+    }
+
+    .name-input{
+        margin-top: 20px;
+        border: $light-gray 1px solid;
+        border-radius: 0;
+        height: 37px;
+        font-size: 15px;
+        width: 253px;
+        text-align: center;
+        color:black;
+    }
+
+    .name-input::-webkit-input-placeholder{
+        font-size: 15px;
+        color: $light-gray;
+    }
+
+    .cancel-btn, .next-btn{
+        height: 37px;
+        width: 122px;
+        color: white;
+        border: none;
+        border-radius: 0;
+        font-family: Roboto;
+        font-weight: 400;
+        text-transform: initial;
+        padding:0;
+    }
+
+    .btn-group{
+        display: flex;
+        width: 253px;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .next-btn{
+        background-color: $primary-blue;
+        
+    }
+
+    .cancel-btn{
+        background-color: $light-gray;
+
+    }
+}

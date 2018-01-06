@@ -16,6 +16,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { MembershipModule } from './membership/membership.module';
 import { MembershipComponent } from './membership/membership.component';
+import { WorkspacePopover1Component } from './workspace-list/workspace-popover-1/workspace-popover-1.component';
+import { WorkspacePopover2Component } from './workspace-list/workspace-popover-2/workspace-popover-2.component';
 
 
 const routes: Routes = [{
@@ -58,7 +60,9 @@ const routes: Routes = [{
     PagesComponent,
     MlheaderComponent,
     MlsidebarComponent,
-    ProfilepicComponent
+    ProfilepicComponent,
+    WorkspacePopover1Component,
+    WorkspacePopover2Component
   ],
   providers: [NbSidebarService, NbMenuService]
 })

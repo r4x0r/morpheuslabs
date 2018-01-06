@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <div class="popover-container-1"
+    *ngIf="currentStep===0">
+    <div class="title">
+      Create New Development Workspace
+    </div>
+    <div class="desc">
+        Specify the name of your workspace
+    </div>
+    <input
+      type="text"
+      id="name"
+      placeholder="Development Workspace Name"
+      class="name-input"
+      #nameInput
+    >
+    <div class="btn-group">
+      <button class="btn cancel-btn">
+        Cancel
+      </button>
+      <button class="btn next-btn" (click)="onNextBtnClicked()">
+        Next
+      </button>
+    </div>
+  </div>
+  <div class="popover-container-2"
+    *ngIf="currentStep===1">
+    <div class="title">
+        Create New Development Workspace
+      </div>
+      <div class="desc">
+        {{name}}
+      </div>
+  </div>
+  <div class="popover-container-3"
+  *ngIf="currentStep===2"></div>
+</div>

@@ -17,7 +17,7 @@ $nb-themes: nb-register-theme((
   design-window-width: 1024px,
 
   font-main: Roboto,
-  font-secondary: Exo,
+  font-secondary: Roboto,
 
   /*HEADER*/
   header-height: 4.75rem,
@@ -46,6 +46,9 @@ $nb-themes: nb-register-theme((
   dashboard-list-text-color: $light-gray,
   dashboard-list-text-font-size: 12px,
   dashboard-section-btm-margin: 30px,
+
+  dashboard-popover-bg: $tsp-black,
+
 
 ), morpheustheme, default);
 

@@ -25,4 +25,6 @@ export class DashboardComponent {
   addListItem(type:string){
     console.log(type)
   }
+
+
 }
