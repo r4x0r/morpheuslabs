@@ -6,10 +6,10 @@
   {
     height:nb-theme(header-height);
     background: white;
+    width: 100%;
 
     padding: 0;
     display: flex;
-    position: fixed;
     align-items: center;
 
     .sidebar-toggle
@@ -17,7 +17,7 @@
       font-size: 2.8125rem;
       color: $primary-blue;
 
-      margin-right: 1rem;
+      margin: 0 1rem 0 1rem;
 
       &:hover
       {
@@ -25,6 +25,44 @@
         color: $secondary-blue;
       }
     }
+
+    .header-logo
+    {
+      .img
+      {
+        background-color: $primary-blue;
+        -webkit-mask: url('../../../../assets/images/Logo_Small.png') center center no-repeat;
+        width:15rem;
+        height:3rem;
+      }
+    }
+  }
+
+  .header-action-button
+  {
+    height: nb-theme(header-height);
+    background: $primary-blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.875rem 1.625rem;
+    color: white;
+
+    margin-left: auto;
+
+    &:hover
+    {
+      text-decoration: none;
+      background: $secondary-blue;
+    }
+
+    i
+    {
+      font-size: 1.625rem;
+      margin-right: 0.625rem; 
+    }
+
   }
 }
 
