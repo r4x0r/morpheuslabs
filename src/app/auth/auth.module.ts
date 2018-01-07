@@ -3,10 +3,13 @@ import { CommonModule } from '@angular/common';
 import { NbThemeModule } from '@nebular/theme';
 import { RouterModule, Routes } from '@angular/router';
 
+import { AuthComponent } from './auth.component';
+
 
 const routes: Routes = [
   {
-    path: 'auth',
+    path: '',
+    component: AuthComponent,
     children: [
       {
         path: '',
@@ -15,11 +18,11 @@ const routes: Routes = [
       },
       {
         path: 'login',
-        loadChildren: './login/loginModule#LoginModule'
+        loadChildren: './login/login.module#LoginModule'
       },
       {
         path: 'register',
-        loadChildren: './register/registerModule#RegisterModule'
+        loadChildren: './register/register.module#RegisterModule'
       }
     ],
   },
@@ -27,6 +30,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
+    AuthComponent
   ],
   imports: [
     NbThemeModule,

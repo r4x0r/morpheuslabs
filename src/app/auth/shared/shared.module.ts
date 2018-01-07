@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NbThemeModule } from '@nebular/theme';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { AuthFormComponent } from './containers/auth-form/auth-form.component';
+import { AuthFormComponent } from './components/auth-form/auth-form.component';
 
 
 @NgModule({

@@ -1,0 +1,23 @@
+<div>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <div class="input-group input-group-fill-only">
+      <input type="email" placeholder="Email" class="form-control" formControlName="email">
+    </div>
+
+    <div class="input-group input-group-fill-only">
+      <input type="password" placeholder="Enter password" class="form-control" formControlName="password">
+    </div>
+
+    <ng-content select=".error"></ng-content>
+
+    <div class="auth-form-action">
+      <ng-content select="button"></ng-content>
+    </div>
+  </form>
+
+  <div class="wrapper-footer">
+    No Account Yet? Create
+    <a routerLink="">here</a>
+  </div>
+</div>

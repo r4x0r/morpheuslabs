@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { NbThemeModule } from '@nebular/theme';
 import { RouterModule, Routes } from '@angular/router';
 
+import { SharedModule } from '../shared/shared.module';
+
 import { LoginComponent } from './containers/login/login.component';
 
 
@@ -20,7 +22,8 @@ const routes: Routes = [
   imports: [
     NbThemeModule,
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    SharedModule
   ],
   providers: []
 })
