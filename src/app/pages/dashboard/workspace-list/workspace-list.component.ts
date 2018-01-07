@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Workspace } from '../../../model/workspace.model'
+import { workspaceList } from '../../../data/workspace-list'
 
 @Component({
   selector: 'app-workspace-list',
@@ -8,10 +9,26 @@ import { Workspace } from '../../../model/workspace.model'
 })
 export class WorkspaceListComponent implements OnInit {
   
-  @Input() workspaceList: Workspace[]
+  workspaceList: Workspace[]
+  showPopover: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
+    this.workspaceList = workspaceList
   }
 
+  onPlusBtnClicked(){
+    this.showPopover = true
+  }
+
+  dismissPopover(){
+    this.showPopover = false
+  }
+
+  addWorkspace(workspace: Workspace) {
+    this.workspaceList.push(workspace)
+    console.log(this.workspaceList)
+    this.showPopover = false
+  }
 }

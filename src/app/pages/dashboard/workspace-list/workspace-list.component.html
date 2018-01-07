@@ -1,4 +1,9 @@
-
+<app-list-header
+    [type] = "'workspace'"
+    [title] = "'Cloud IDE Workspace'"
+    [description] = "'Nullam et ante id erat suscript porta'"
+    (plusBtnClicked) = "onPlusBtnClicked($event)"
+></app-list-header>
 <div class="workspace-container row">
   <div class="col"
     *ngFor="let workspace of workspaceList">
@@ -6,6 +11,11 @@
       [workspace]="workspace"  
     ></app-workspace-item>
   </div>
+  <app-workspace-popover
+    *ngIf="showPopover"
+    (confirmBtnClicked) = "addWorkspace($event)"
+    (cancelBtnClicked) = "dismissPopover()">
+  </app-workspace-popover>
 </div>
 
 

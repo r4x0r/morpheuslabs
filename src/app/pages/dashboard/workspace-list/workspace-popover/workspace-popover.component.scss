@@ -19,8 +19,11 @@
         flex-direction: column;
         align-items: center;
         background: white;
-        padding: 40px;
+        padding-top: 40px;
+        padding-bottom: 40px;
         border-radius: 5px;
+        padding-left: 3vw;
+        padding-right: 3vw;
     }
 
     .popover-container-1{
@@ -28,9 +31,9 @@
         flex-direction: column;
         align-items: center;
         background: white;
-        padding-left: 60px;
-        padding-right: 60px;
         border-radius: 5px;
+        padding-left: 3vw;
+        padding-right: 3vw;
     }
 
     .title{
@@ -61,14 +64,17 @@
 
     .cancel-btn, .next-btn{
         height: 37px;
-        width: 122px;
         color: white;
         border: none;
         border-radius: 0;
         font-family: Roboto;
         font-weight: 400;
         text-transform: initial;
-        padding:0;
+        padding-left:14px;
+        padding-right: 14px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        min-width: 122px;
     }
 
     .btn-group{
@@ -78,13 +84,21 @@
         margin-top: 10px;
     }
 
+    .btn-group-alt{
+        display: flex;
+        width: 100%;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: flex-end;
+        margin-top: 10px;
+    }
+
     .next-btn{
         background-color: $primary-blue;
-        
+        margin-left: 15px;
     }
 
     .cancel-btn{
         background-color: $light-gray;
-
     }
 }

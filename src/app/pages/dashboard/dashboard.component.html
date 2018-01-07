@@ -1,31 +1,7 @@
-<app-list-header
-    [type] = "'workspace'"
-    [title] = "'Cloud IDE Workspace'"
-    [description] = "'Nullam et ante id erat suscript porta'"
-    (plusBtnClicked) = "addListItem($event)"
-></app-list-header>
-<app-workspace-list
-    [workspaceList] = "workspaceList"
-></app-workspace-list>
-<app-workspace-popover
-    (confirmBtnClicked) = "addWorkshop()"
-    (cancelBtnClicked) = "dismissPopover()">
-</app-workspace-popover>
-<app-list-header
+<app-workspace-list></app-workspace-list>
+<app-repo-list
     [type] = "'repo'"
-    [title] = "'Git Repositories'"
-    [description] = "'Nullam et ante id erat suscript porta'"
-    (plusBtnClicked) = "addListItem($event)"
-></app-list-header>
-<app-repo-list
-    [repoList] = "repoList"
 ></app-repo-list>
-<app-list-header
-    [type] = "'sample-repo'"
-    [title] = "'Sample Repositories'"
-    [description] = "'Nullam et ante id erat suscript porta'"
-    (plusBtnClicked) = "addListItem($event)"
-></app-list-header>
 <app-repo-list
-    [repoList] = "sampleRepoList"
+    [type] = "'sample-repo'"
 ></app-repo-list>
