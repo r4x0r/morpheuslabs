@@ -1,6 +1,6 @@
 <div class="login-wrapper">
   <div class="wrapper-header"> Sign In </div>
-  <ml-auth-form>
+  <ml-auth-form (submitted)="loginUser($event)">
     <button type="submit" class="btn">Login</button>
   </ml-auth-form>
 </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 
 @Component({
@@ -7,5 +8,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
+
+  constructor()
+  {
+
+  }
+
+  loginUser(event: FormGroup)
+  {
+    console.log(event.value);
+  }
 
 }
