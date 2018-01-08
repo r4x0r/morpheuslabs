@@ -17,7 +17,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MembershipModule } from './membership/membership.module';
 import { MembershipComponent } from './membership/membership.component';
 
-
 const routes: Routes = [{
   path: '',
   component: PagesComponent,
@@ -58,7 +57,7 @@ const routes: Routes = [{
     PagesComponent,
     MlheaderComponent,
     MlsidebarComponent,
-    ProfilepicComponent
+    ProfilepicComponent,
   ],
   providers: [NbSidebarService, NbMenuService]
 })

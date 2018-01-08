@@ -1,0 +1,10 @@
+@import '../../../@theme/themes';
+
+:host{
+    .col{
+        margin-bottom: 8px;
+    }
+    .workspace-container{
+        margin-bottom: nb-theme(dashboard-section-btm-margin);
+    }
+}
