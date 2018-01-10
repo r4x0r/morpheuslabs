@@ -1,11 +1,32 @@
 <nb-layout>
   <nb-sidebar responsive class="menu-sidebar">
-    <!-- <nb-sidebar-header>
-      <div>Sidebar header</div>
-    </nb-sidebar-header>
-    <nb-menu [items]="menu"></nb-menu> -->
-
     <ml-sidebar [menu]="menu"></ml-sidebar>
+    <nb-sidebar-footer>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm p-0">
+            <div class="sidebar-action-button border-left-0 border-bottom-0">
+              <i class='nb-compose'></i>
+            </div>
+          </div>
+          <div class="col-sm p-0">
+            <div class="sidebar-action-button border-left-0 border-bottom-0">
+              <i class='nb-email'></i>
+            </div>
+          </div>
+          <div class="col-sm p-0">
+            <div class="sidebar-action-button border-left-0 border-bottom-0">
+              <i class='nb-notifications'></i>
+            </div>
+          </div>
+          <div class="col-sm p-0">
+            <div class="sidebar-action-button border-left-0 border-right-0 border-bottom-0">
+              <i class='nb-gear'></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nb-sidebar-footer>
   </nb-sidebar>
   <nb-layout-column>
     <ml-header></ml-header>
