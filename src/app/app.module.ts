@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NbThemeModule } from '@nebular/theme';
 import { RouterModule, Routes } from '@angular/router';
-
 import { AppComponent } from './app.component';
 
 const routes: Routes = [

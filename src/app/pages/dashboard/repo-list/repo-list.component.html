@@ -1,0 +1,14 @@
+<app-list-header
+    [type] = "type"
+    [title] = "type == 'sample-repo' ? 'Sample Repositories' : 'Git Repositories'"
+    [description] = "'Nullam et ante id erat suscript porta'"
+></app-list-header>
+<div class="repo-container">
+  <div class="item-container"
+    *ngFor="let repo of repoList">
+    <app-repo-item
+      [repo]="repo"  
+    ></app-repo-item>
+  </div>
+</div>
+  

@@ -1,0 +1,11 @@
+@import '../../../@theme/themes';
+
+:host{
+    .item-container{
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    .repo-container{
+        margin-bottom: nb-theme(dashboard-section-btm-margin);
+    }
+}

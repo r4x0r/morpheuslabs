@@ -1,0 +1,127 @@
+<div class="container-fluid">
+  <div class="popover-container-1"
+    *ngIf="currentStep===0">
+    <div class="title">
+      Create New Development Workspace
+    </div>
+    <div class="desc">
+        Specify the name of your workspace
+    </div>
+    <input
+      type="text"
+      id="name"
+      placeholder="Development Workspace Name"
+      class="name-input"
+      [(ngModel)]="name"
+      #nameInput
+    >
+    <div class="btn-group">
+      <button class="btn cancel-btn" (click)="onCancelBtnClicked()">
+        Cancel
+      </button>
+      <button 
+        class="btn next-btn" 
+        (click)="onNextBtnClicked()" 
+        [disabled]="name==='' ? true : false">
+        Next
+      </button>
+    </div>
+  </div>
+  <div class="popover-container-2"
+    *ngIf="currentStep===1">
+    <div class="title">
+      Create New Development Workspace
+    </div>
+    <div class="desc">
+      {{name}}
+    </div>
+    <app-option-section
+      [title] = "'Choose a Blockchain to work'">
+      <app-checkbox-item 
+        style="flex-grow: 1; max-width: 32%;"
+        *ngFor="let item of blockchains; let i = index"
+        [isChecked]="blockchains[i] === selectedChain"
+        [type]="'blockchain'"
+        [index]="i"
+        [title]="item"
+        (checkedEvent)="updateOption($event)"
+        ></app-checkbox-item>
+    </app-option-section>
+    <app-option-section
+      [title] = "'Choose a type of application you will create'">
+      <app-checkbox-item 
+        style="flex-grow: 1; max-width: 49%;"
+        *ngFor="let item of appTypes; let i = index"
+        [isChecked]="appTypes[i] === selectedType"
+        [type]="'appType'"
+        [index]="i"
+        [title]="item"
+        (checkedEvent)="updateOption($event)"
+        ></app-checkbox-item>
+    </app-option-section>
+    <app-option-section
+      [title] = "'Choose runtime environment'"
+      [showBorder] = "false">
+      <app-checkbox-item 
+        style="flex-grow: 1; max-width: 32%;"
+        *ngFor="let item of environments; let i = index"
+        [isChecked]="environments[i] === selectedEnv"
+        [type]="'environment'"
+        [index]="i"
+        [title]="item"
+        (checkedEvent)="updateOption($event)"
+        ></app-checkbox-item>
+    </app-option-section>
+    <div class="btn-group-alt">
+        <button 
+          class="btn cancel-btn"
+          (click)="onBackBtnClicked()">
+          Back
+        </button>
+        <button 
+          class="btn next-btn" 
+          (click)="onNextBtnClicked()">
+          Next
+        </button>
+      </div>
+  </div>
+  <div class="popover-container-3"
+    *ngIf="currentStep===2">
+    <div class="title">
+      New Development Workspace Confirmation
+    </div>
+    <app-option-section
+      [title] = "'Development Workspace Name'">
+      <div>{{name}}</div>
+    </app-option-section>
+    <app-option-section
+      [title] = "'Blockchain Type'">
+      <div>{{selectedChain}}</div>
+    </app-option-section>
+    <app-option-section
+      [title] = "'Application Type'">
+      <div>{{selectedType}}</div>
+    </app-option-section>
+    <app-option-section
+      [title] = "'Preferred Language'">
+      <div>{{selectedLang}}</div>
+    </app-option-section>
+    <app-option-section
+      [title] = "'Runtime Environment'"
+      [showBorder] = "false">
+      <div>{{selectedEnv}}</div>
+    </app-option-section>
+    <div class="btn-group-alt">
+      <button 
+        class="btn cancel-btn"
+        (click)="onBackBtnClicked()">
+        Back
+      </button>
+      <button 
+        class="btn next-btn" 
+        (click)="onConfirmBtnClicked()">
+        Confirm & Submit
+      </button>
+    </div>
+  </div>
+</div>
