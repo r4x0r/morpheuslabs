@@ -1,6 +1,6 @@
 @import '../@theme/themes';
 
-:host 
+:host::ng-deep
 {
   nb-layout-column
   {
@@ -10,5 +10,31 @@
   .content_display
   {
     padding: nb-theme(layout-padding);
-  } 
+  }
+  
+  // Override responsive mode settings
+  nb-sidebar
+  {
+    &.compacted
+    {
+      &.fixed
+      {
+        top:0 !important;
+      }
+
+      nb-sidebar-header
+      {
+        margin-left: -1.25rem;
+        margin-right: -1.25rem;
+
+        display: flex;
+        justify-content: center;
+
+        .profile-name
+        {
+          display: none;
+        }
+      }
+    }
+  }
 }
