@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,7 +10,7 @@ import { FormGroup } from '@angular/forms';
 })
 export class LoginComponent {
 
-  constructor()
+  constructor(private router: Router)
   {
 
   }
@@ -17,6 +18,7 @@ export class LoginComponent {
   loginUser(event: FormGroup)
   {
     console.log(event.value);
+    this.router.navigate(['pages']);
   }
 
 }
