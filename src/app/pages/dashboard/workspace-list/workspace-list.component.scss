@@ -7,4 +7,10 @@
     .workspace-container{
         margin-bottom: nb-theme(dashboard-section-btm-margin);
     }
+    .show-more{
+        border: none;
+        background-color: transparent;
+        margin-bottom: nb-theme(dashboard-section-btm-margin);
+        color: $primary-blue;
+    }
 }

@@ -14,6 +14,9 @@
         padding-left: 20px;
         padding-right: 20px;
     }
+    .item-container:hover{
+        background-color: $primary-gray;
+    }
     .icon{
         background-image: url('../../../../../assets/icons/workspace-icon.png');
         background-repeat: no-repeat;

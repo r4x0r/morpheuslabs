@@ -5,4 +5,8 @@ export const workspaceList: Workspace[] = [
     new Workspace('DECENT-WS','runnning','','','',''),
     new Workspace('copay','runnning','','','',''),
     new Workspace('CargoChain','runnning','','','',''),
+    new Workspace('Workspace_Cryptowall','runnning','','','',''),
+    new Workspace('DECENT-WS','runnning','','','',''),
+    new Workspace('copay','runnning','','','',''),
+    new Workspace('CargoChain','runnning','','','',''),
   ]
