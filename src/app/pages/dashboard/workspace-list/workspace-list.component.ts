@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Workspace } from '../../../model/workspace.model'
-import { workspaceList } from '../../../data/workspace-list'
+import { WorkspaceService } from '../../../services/workspace.service'
 
 @Component({
   selector: 'app-workspace-list',
@@ -12,10 +12,16 @@ export class WorkspaceListComponent implements OnInit {
   workspaceList: Workspace[]
   showPopover: boolean = false;
 
-  constructor() { }
+  constructor(private workspaceService: WorkspaceService) { }
 
   ngOnInit() {
-    this.workspaceList = workspaceList
+    this.workspaceList = this.workspaceService.getWorkshops()
+    this.workspaceService.createWorkshopBtnClicked
+    .subscribe(
+      () => {
+        this.showPopover = true
+      }
+    );
   }
 
   onPlusBtnClicked(){
@@ -27,8 +33,7 @@ export class WorkspaceListComponent implements OnInit {
   }
 
   addWorkspace(workspace: Workspace) {
-    this.workspaceList.push(workspace)
-    console.log(this.workspaceList)
+    this.workspaceList = this.workspaceService.addWorkshop(workspace)
     this.showPopover = false
   }
 }

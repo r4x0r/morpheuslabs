@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NbMenuService, NbSidebarService } from '@nebular/theme';
+import { WorkspaceService } from '../../../services/workspace.service'
 
 @Component({
   selector: 'ml-header',
@@ -9,7 +10,7 @@ import { NbMenuService, NbSidebarService } from '@nebular/theme';
 export class MlheaderComponent implements OnInit {
 
   constructor(private sidebarService: NbSidebarService,
-    private menuService: NbMenuService) { }
+    private menuService: NbMenuService, private workspaceService: WorkspaceService) { }
 
   ngOnInit() {
   }
@@ -17,6 +18,10 @@ export class MlheaderComponent implements OnInit {
   toggleSidebar(): boolean {
     this.sidebarService.toggle(true, 'menu-sidebar');
     return false;
+  }
+
+  createBtnClicked() {
+    this.workspaceService.createWorkshopBtnClicked.emit()
   }
 
 }
