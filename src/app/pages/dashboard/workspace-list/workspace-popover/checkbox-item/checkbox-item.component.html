@@ -1,5 +1,9 @@
-<div class="checkbox-item" (click)="onChange()">
+<div class="checkbox-item">
   <input type="checkbox" [checked]="isChecked" (change)="onChange()" />
-  <span class="checkmark"></span>
+  <span class="checkmark" (click)="onChange()"></span>
   <div class="title">{{title}}</div>
+  <button 
+    *ngIf="showInfoBtn"
+    class="info"
+    ></button>
 </div>

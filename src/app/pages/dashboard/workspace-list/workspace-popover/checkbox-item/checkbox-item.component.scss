@@ -74,3 +74,21 @@
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
+
+.info{
+    z-index: 2000;
+    position: absolute;
+    right: 10px;
+    border: none;
+    height: 22px;
+    width: 22px;
+    background-image: url('../../../../../../assets/icons/info-icon.png');
+    outline: none;
+    background-position: 50% 50%;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+
+.info:focus{
+    background-image: url('../../../../../../assets/icons/info-icon-active.png');
+}

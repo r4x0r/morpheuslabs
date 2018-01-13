@@ -10,6 +10,7 @@ export class CheckboxItemComponent implements OnInit {
   @Input() index:number = 0
   @Input() type:string = 'default'
   @Input() isChecked: boolean = false
+  @Input() showInfoBtn: boolean = false
   @Output() checkedEvent = new EventEmitter<{type:string, index:number}>()
 
   constructor() { }

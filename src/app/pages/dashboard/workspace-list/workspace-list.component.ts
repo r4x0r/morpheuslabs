@@ -10,7 +10,7 @@ import { WorkspaceService } from '../../../services/workspace.service'
 export class WorkspaceListComponent implements OnInit {
   
   workspaceList: Workspace[]
-  showPopover: boolean = false;
+  showPopover: boolean = true;
 
   constructor(private workspaceService: WorkspaceService) { }
 
