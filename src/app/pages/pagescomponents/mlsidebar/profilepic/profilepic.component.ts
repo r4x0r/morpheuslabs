@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../../../services/user.service'
+import { User } from '../../../../model/user.model'
 
 @Component({
   selector: 'ml-profilepic',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfilepicComponent implements OnInit {
 
-  constructor() { }
+  user: User
+  constructor(private us: UserService) { }
 
   ngOnInit() {
+    this.user = this.us.getUser()
+    console.log(this.user)
   }
 
 }
