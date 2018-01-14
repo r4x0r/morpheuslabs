@@ -19,7 +19,7 @@ export class WorkspaceItemComponent implements OnInit {
   }
 
   onWorkshopSelect(){
-    var newWindow = this.nativeWindow.open('https://codenvy.io/dashboard/#/workspace/xc4330/wksp-b05h?tab=Overview');
+    var newWindow = this.nativeWindow.open(this.workspace.link);
   }
 
 }

@@ -30,7 +30,7 @@
         white-space: nowrap;
         overflow: hidden;
     }
-    .status-icon{
+    .status-icon-RUNNING, .status-icon-STOPPED{
         background-image: url('../../../../../assets/icons/workspace-status-online.png');
         background-repeat: no-repeat;
         background-size: 100%;
@@ -38,6 +38,9 @@
         width: 20px;
         margin-right: 20px;
         margin-left: auto;
+    }
+    .status-icon-STOPPED{
+        background-image: url('../../../../../assets/icons/workspace-status-stopped.png');
     }
     .delete-btn{
         background-image: url('../../../../../assets/icons/workspace-delete.png');

@@ -1,7 +1,11 @@
-<app-workspace-list></app-workspace-list>
+<app-workspace-list 
+    *ngIf="isUserLoaded">
+</app-workspace-list>
 <app-repo-list
+    *ngIf="isUserLoaded"
     [type] = "'repo'"
 ></app-repo-list>
 <app-repo-list
+    *ngIf="isUserLoaded"
     [type] = "'sample-repo'"
 ></app-repo-list>

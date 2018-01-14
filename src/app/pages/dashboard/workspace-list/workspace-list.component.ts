@@ -12,10 +12,12 @@ export class WorkspaceListComponent implements OnInit {
   workspaceList: Workspace[]
   showPopover: boolean = false;
 
-  constructor(private workspaceService: WorkspaceService) { }
+  constructor(
+    private workspaceService: WorkspaceService,
+  ) { }
 
   ngOnInit() {
-    this.workspaceList = this.workspaceService.getWorkshops()
+    this.workspaceList = this.workspaceService.getWorkspaces()
     this.workspaceService.createWorkshopBtnClicked
     .subscribe(
       () => {
@@ -33,7 +35,7 @@ export class WorkspaceListComponent implements OnInit {
   }
 
   addWorkspace(workspace: Workspace) {
-    this.workspaceList = this.workspaceService.addWorkshop(workspace)
+    this.workspaceList = this.workspaceService.addWorkspace(workspace)
     this.showPopover = false
   }
 }
