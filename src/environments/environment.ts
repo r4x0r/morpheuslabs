@@ -4,5 +4,8 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+	production: false,
+	realm: 'che',
+	clientId: 'che-public',
+	keycloakBaseUrl: 'http://wsdev.campflex.com:5050/auth'
 };
