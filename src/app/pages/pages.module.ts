@@ -26,7 +26,11 @@ const routes: Routes = [{
   },
   {
     path: 'membership',
-    component: MembershipComponent
+    loadChildren: './membership/membership.module#MembershipModule'
+  },
+  {
+    path: 'applicationlibrary',
+    loadChildren: './applicationlibrary/applicationlibrary.module#ApplicationLibraryModule'
   },
   {
     path: '',

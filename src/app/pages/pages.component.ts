@@ -40,7 +40,7 @@ export class PagesComponent {
     {
       title: 'Application Library',
       icon: 'nb-person',
-      link: '/pages/membership'
+      link: '/pages/applicationlibrary'
     },
     {
       title: 'API Library',

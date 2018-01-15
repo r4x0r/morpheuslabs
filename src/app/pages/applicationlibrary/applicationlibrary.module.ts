@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 import { NbThemeModule } from '@nebular/theme';
 import { Routes, RouterModule } from '@angular/router';
 
-import { MembershipComponent } from './membership.component';
+import { ApplicationLibraryComponent } from './applicationlibrary.component';
 
 const routes: Routes = [{
   path: '',
-  component: MembershipComponent
+  component: ApplicationLibraryComponent
 }];
 
 @NgModule({
@@ -17,7 +17,7 @@ const routes: Routes = [{
     RouterModule.forChild(routes),
   ],
   declarations: [
-    MembershipComponent
+    ApplicationLibraryComponent
   ]
 })
-export class MembershipModule { }
+export class ApplicationLibraryModule { }
