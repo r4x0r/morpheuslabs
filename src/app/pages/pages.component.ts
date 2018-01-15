@@ -18,7 +18,7 @@ export class PagesComponent {
     },
     {
       title: 'Dashboard',
-      icon: 'nb-layout-default',
+      icon: 'ion-speedometer',
       link: '/pages/dashboard',
       home: true,
     },
@@ -29,22 +29,22 @@ export class PagesComponent {
     },
     {
       title: 'Team',
-      icon: 'nb-person',
+      icon: 'ion-ios-people-outline',
       link: '/pages/membership'
     },
     {
       title: 'Technical Support',
-      icon: 'nb-person',
+      icon: 'ion-ios-information-outline',
       link: '/pages/membership'
     },
     {
       title: 'Application Library',
-      icon: 'nb-person',
+      icon: 'ion-ios-browsers-outline',
       link: '/pages/applicationlibrary'
     },
     {
       title: 'API Library',
-      icon: 'nb-person',
+      icon: 'ion-ios-list-outline',
       link: '/pages/membership'
     },
     {
@@ -53,7 +53,7 @@ export class PagesComponent {
     },
     {
       title: 'Forum',
-      icon: 'nb-person',
+      icon: 'ion-chatbubble-working',
       link: '/pages/membership'
     },
     {

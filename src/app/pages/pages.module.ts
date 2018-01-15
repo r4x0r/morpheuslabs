@@ -14,8 +14,6 @@ import { ProfilepicComponent } from './pagescomponents/mlsidebar/profilepic/prof
 import { DashboardModule } from './dashboard/dashboard.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
-import { MembershipModule } from './membership/membership.module';
-import { MembershipComponent } from './membership/membership.component';
 
 const routes: Routes = [{
   path: '',
@@ -54,8 +52,7 @@ const routes: Routes = [{
     NbSidebarModule.forRoot(),
     NbMenuModule.forRoot(),
 
-    DashboardModule,
-    MembershipModule
+    DashboardModule
   ],
   declarations: [
     PagesComponent,
