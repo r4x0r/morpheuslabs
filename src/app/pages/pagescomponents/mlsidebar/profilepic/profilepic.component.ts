@@ -10,11 +10,16 @@ import { User } from '../../../../model/user.model'
 export class ProfilepicComponent implements OnInit {
 
   user: User
+  avatarLink: String 
+
   constructor(private us: UserService) { }
 
-  ngOnInit() {
+  ngOnInit() 
+  {
     this.user = this.us.getUser()
-    console.log(this.user)
+    
+    //Set up the avatar initials
+    this.avatarLink = `https://ui-avatars.com/api/?size=45&background=fff&color=0D8ABC&name=${this.user.firstName}+${this.user.lastName}`
   }
 
 }
