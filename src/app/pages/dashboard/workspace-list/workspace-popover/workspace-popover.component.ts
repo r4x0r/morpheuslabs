@@ -61,7 +61,7 @@ export class WorkspacePopoverComponent implements OnInit {
 
 
   onConfirmBtnClicked(){
-    this.confirmBtnClicked.emit(new Workspace(this.name,'online',''))
+    this.confirmBtnClicked.emit(new Workspace(this.name,'STOPPED','','','',''))
   }
 
   onCancelBtnClicked(){

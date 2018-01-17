@@ -27,10 +27,15 @@ export class WorkspaceService {
             let json = data as Array<JSON>
             json.forEach(ws => {
                 console.log(ws)
-                this.workspaces.push(new Workspace(
-                    ws['config'].name,
-                    ws['status'],
-                    ws['links'].ide))
+                this.workspaces.push(
+                    new Workspace(
+                        ws['config'].name,
+                        ws['status'],
+                        ws['links'].ide,
+                        ws['config'].environments.default.recipe.location,
+                        ws['config'].environments.default.recipe.type,
+                        ws['namespace']
+        ))
             })
             console.log(this.workspaces) 
         });
