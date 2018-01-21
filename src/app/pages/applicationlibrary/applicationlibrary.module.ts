@@ -4,6 +4,7 @@ import { NbThemeModule } from '@nebular/theme';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ApplicationLibraryComponent } from './applicationlibrary.component';
+import { ApplicationComponent } from './application/application.component';
 
 const routes: Routes = [{
   path: '',
@@ -17,7 +18,8 @@ const routes: Routes = [{
     RouterModule.forChild(routes),
   ],
   declarations: [
-    ApplicationLibraryComponent
+    ApplicationLibraryComponent,
+    ApplicationComponent
   ]
 })
 export class ApplicationLibraryModule { }

@@ -1,26 +1,13 @@
 @import '../../@theme/themes';
-
-:host
-{
-  .application-library-intro
-  {
+:host {
+  .application-library-intro {
     min-height: 18.75rem;
   }
-
-  .title
-  {
+  .title {
     color: nb-theme(dashboard-list-title-color);
     font-size: nb-theme(dashboard-list-title-font-size);
-
     margin-bottom: 0.625rem;
     margin-top: 0.625rem;
   }
-
-  .application-library-applications
-  {
-    .card
-    {
-      width: 17.5rem;
-    }
-  }
+  .application-library-applications {}
 }

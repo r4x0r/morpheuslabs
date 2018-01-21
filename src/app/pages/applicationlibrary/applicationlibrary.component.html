@@ -8,12 +8,10 @@
 <div>
   <div class="title">Applications</div>
   <div class="application-library-applications">
-    <!-- for now -->
-    <div class="card">
-      <img class="card-img-top" src="http://via.placeholder.com/280x180" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Blockchain App #1</h5>
-        <p class="card-text">Some quick example text and description for blockchain application #1.</p>
+    <!-- loop -->
+    <div class="row">
+      <div class="col-sm" *ngFor="let app of apps">
+        <ml-application [appname]="app.name"></ml-application>
       </div>
     </div>
   </div>

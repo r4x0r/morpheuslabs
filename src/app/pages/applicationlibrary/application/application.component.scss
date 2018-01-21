@@ -1,0 +1,9 @@
+@import '../../../@theme/themes';
+:host {
+  .card {
+    max-width: 17.5rem;
+    flex: 1;
+    min-width: 17rem;
+    margin-bottom: 0.9375rem;
+  }
+}
