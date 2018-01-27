@@ -6,14 +6,12 @@ import { NbThemeModule } from '@nebular/theme';
 import { NbSidebarModule, NbLayoutModule, NbSidebarService, NbMenuModule, NbMenuService } from '@nebular/theme';
 
 import { PagesComponent } from './pages.component';
-
 import { MlheaderComponent } from './pagescomponents/mlheader/mlheader.component';
 import { MlsidebarComponent } from './pagescomponents/mlsidebar/mlsidebar.component';
 import { ProfilepicComponent } from './pagescomponents/mlsidebar/profilepic/profilepic.component';
 
-import { DashboardModule } from './dashboard/dashboard.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import { DashboardModule } from './dashboard/dashboard.module';
 
 const routes: Routes = [{
   path: '',
@@ -35,10 +33,10 @@ const routes: Routes = [{
     redirectTo: 'dashboard',
     pathMatch: 'full',
   }
-  // {
-  //   path: 'ui-features',
-  //   loadChildren: './ui-features/ui-features.module#UiFeaturesModule',
-  // }
+    // {
+    //   path: 'ui-features',
+    //   loadChildren: './ui-features/ui-features.module#UiFeaturesModule',
+    // }
   ],
 }];
 
