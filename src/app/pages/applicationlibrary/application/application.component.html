@@ -3,5 +3,9 @@
   <div class="card-body">
     <h5 class="card-title">{{application.name}}</h5>
     <p class="card-text">Some quick example text and description for blockchain application #1.</p>
+    <div class="app-rating">
+      <i class="fa fa-star" *repeatTimes="application.appRating"></i>
+      <i class="fa fa-star-o" *repeatTimes="5 - application.appRating"></i>
+    </div>
   </div>
 </div>

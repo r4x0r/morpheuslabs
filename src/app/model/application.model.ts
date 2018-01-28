@@ -1,4 +1,5 @@
 export interface Application {
   name: String,
-  appIcon: String
+  appIcon: String,
+  appRating: number
 }
