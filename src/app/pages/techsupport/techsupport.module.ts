@@ -24,4 +24,4 @@ const routes: Routes = [{
     TechSupportComponent
   ]
 })
-export class MembershipModule { }
+export class TechSupportModule { }

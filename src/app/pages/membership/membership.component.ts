@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 
 @Component({
@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class MembershipComponent {
 
+  pageDetails;
+
+  ngOnInit() {
+    this.pageDetails = {
+      pageTitle: "Membership Details",
+      pageDescription: "Your team's membership information and legal agreements",
+      pageIcon: "../../../assets/icons/membership-icon.png"
+    };
+  }
 }
