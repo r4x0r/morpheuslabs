@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { NbThemeModule } from '@nebular/theme';
 import { Routes, RouterModule } from '@angular/router';
 
-import { MlPagelayoutComponent } from '../pagescomponents/pagelayout/pagelayout.component';
+import { PagesSharedModule } from '../shared/shared.module';
+
 import { ApplicationLibraryComponent } from './applicationlibrary.component';
 import { ApplicationComponent } from './application/application.component';
 
@@ -18,11 +19,11 @@ const routes: Routes = [{
     CommonModule,
     NbThemeModule,
     RouterModule.forChild(routes),
+    PagesSharedModule
   ],
   declarations: [
     ApplicationLibraryComponent,
-    ApplicationComponent,
-    MlPagelayoutComponent,
+    ApplicationComponent
   ]
 })
 export class ApplicationLibraryModule { }

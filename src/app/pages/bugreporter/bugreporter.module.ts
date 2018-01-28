@@ -5,12 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { PagesSharedModule } from '../shared/shared.module';
 
-import { MembershipComponent } from './membership.component';
+import { BugReporterComponent } from './bugreporter.component';
 
 
 const routes: Routes = [{
   path: '',
-  component: MembershipComponent
+  component: BugReporterComponent
 }];
 
 @NgModule({
@@ -21,7 +21,7 @@ const routes: Routes = [{
     PagesSharedModule
   ],
   declarations: [
-    MembershipComponent
+    BugReporterComponent
   ]
 })
-export class MembershipModule { }
+export class BugReporterModule { }

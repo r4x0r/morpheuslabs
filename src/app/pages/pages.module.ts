@@ -29,6 +29,10 @@ const routes: Routes = [{
     loadChildren: './applicationlibrary/applicationlibrary.module#ApplicationLibraryModule'
   },
   {
+    path: 'bugreporter',
+    loadChildren: './bugreporter/bugreporter.module#BugReporterModule'
+  },
+  {
     path: '',
     redirectTo: 'dashboard',
     pathMatch: 'full',
@@ -56,7 +60,7 @@ const routes: Routes = [{
     PagesComponent,
     MlheaderComponent,
     MlsidebarComponent,
-    ProfilepicComponent,
+    ProfilepicComponent
   ],
   providers: [NbSidebarService, NbMenuService]
 })

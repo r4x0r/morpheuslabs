@@ -7,9 +7,10 @@ import { User } from '../model/user.model'
 @Component({
   selector: 'ml-pages',
   templateUrl: './pages.component.html',
-  styleUrls:['./pages.component.scss']
+  styleUrls: ['./pages.component.scss']
 })
-export class PagesComponent {
+export class PagesComponent
+{
 
   menu: NbMenuItem[] = [
     {
@@ -59,7 +60,7 @@ export class PagesComponent {
     {
       title: 'Bug Reporter',
       icon: 'nb-person',
-      link: '/pages/membership'
+      link: '/pages/bugreporter'
     },
     {
       title: 'News & Reporter',
@@ -75,19 +76,22 @@ export class PagesComponent {
     private us: UserService
   ) { }
 
-  ngOnInit() {
-    this.kc.loadProfile().then(user => {
+  ngOnInit()
+  {
+    this.kc.loadProfile().then(user =>
+    {
       this.kcUserProfile = user;
       // console.log(this.kcUserProfile)
-      this.kc.getToken().then(res => {
+      this.kc.getToken().then(res =>
+      {
         // console.log(res)
         let user = this.us.initUser(
-          new User(res,this.kcUserProfile.firstName,this.kcUserProfile.lastName,this.kcUserProfile.username,this.kcUserProfile.email)
+          new User(res, this.kcUserProfile.firstName, this.kcUserProfile.lastName, this.kcUserProfile.username, this.kcUserProfile.email)
         )
         this.isUserLoaded = true
         console.log(this.us.getUser())
       })
-		})
+    })
   }
 
 }
