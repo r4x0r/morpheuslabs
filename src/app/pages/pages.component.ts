@@ -9,8 +9,7 @@ import { User } from '../model/user.model'
   templateUrl: './pages.component.html',
   styleUrls: ['./pages.component.scss']
 })
-export class PagesComponent
-{
+export class PagesComponent {
 
   menu: NbMenuItem[] = [
     {
@@ -31,12 +30,12 @@ export class PagesComponent
     {
       title: 'Team',
       icon: 'ion-ios-people-outline',
-      link: '/pages/membership'
+      link: '/pages/team'
     },
     {
       title: 'Technical Support',
       icon: 'ion-ios-information-outline',
-      link: '/pages/membership'
+      link: '/pages/techsupport'
     },
     {
       title: 'Application Library',
@@ -46,7 +45,7 @@ export class PagesComponent
     {
       title: 'API Library',
       icon: 'ion-ios-list-outline',
-      link: '/pages/membership'
+      link: '/pages/apilib'
     },
     {
       title: 'OTHER RESOURCES',
@@ -55,7 +54,7 @@ export class PagesComponent
     {
       title: 'Forum',
       icon: 'ion-chatbubble-working',
-      link: '/pages/membership'
+      link: '/pages/forum'
     },
     {
       title: 'Bug Reporter',
@@ -65,7 +64,7 @@ export class PagesComponent
     {
       title: 'News & Reporter',
       icon: 'nb-person',
-      link: '/pages/membership'
+      link: '/pages/news'
     }
   ]
 
@@ -76,14 +75,11 @@ export class PagesComponent
     private us: UserService
   ) { }
 
-  ngOnInit()
-  {
-    this.kc.loadProfile().then(user =>
-    {
+  ngOnInit() {
+    this.kc.loadProfile().then(user => {
       this.kcUserProfile = user;
       // console.log(this.kcUserProfile)
-      this.kc.getToken().then(res =>
-      {
+      this.kc.getToken().then(res => {
         // console.log(res)
         let user = this.us.initUser(
           new User(res, this.kcUserProfile.firstName, this.kcUserProfile.lastName, this.kcUserProfile.username, this.kcUserProfile.email)

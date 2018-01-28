@@ -25,12 +25,32 @@ const routes: Routes = [{
     loadChildren: './membership/membership.module#MembershipModule'
   },
   {
+    path: 'team',
+    loadChildren: './team/team.module#TeamModule'
+  },
+  {
+    path: 'techsupport',
+    loadChildren: './techsupport/techsupport.module#TechSupportModule'
+  },
+  {
     path: 'applicationlibrary',
     loadChildren: './applicationlibrary/applicationlibrary.module#ApplicationLibraryModule'
   },
   {
+    path: 'apilib',
+    loadChildren: './apilibrary/apilibrary.module#ApiLibraryModule'
+  },
+  {
+    path: 'forum',
+    loadChildren: './forum/forum.module#ForumModule'
+  },
+  {
     path: 'bugreporter',
     loadChildren: './bugreporter/bugreporter.module#BugReporterModule'
+  },
+  {
+    path: 'news',
+    loadChildren: './news/news.module#NewsModule'
   },
   {
     path: '',
