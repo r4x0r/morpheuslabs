@@ -1,13 +1,12 @@
 import { Repo } from '../model/repo.model';
 
 export const repoList: Repo[] = [
-    new Repo('Multichain-web-demo','',false),
-    new Repo('Car-lease-demo','',false),
+    new Repo('crypto-wallet-copay', 'https://github.com/campflex/crypto-wallet-copay.git', false),
 ]
 
 export const sampleRepoList: Repo[] = [
-    new Repo('Cargochain','',true),
-    new Repo('Copay','',true),
-    new Repo('Multichain-explorer','',true),
-    new Repo('Multichain-web-demo','',true),
+    new Repo('HyperLedger Fabric Sample Applications', 'https://github.com/hyperledger/fabric-samples.git', true),
+    new Repo('HyperLedger Composer Sample Applications', 'https://github.com/hyperledger/composer-sample-applications.git', true),
+    new Repo('Ethereum Sample Applications', 'https://github.com/ethjs/examples.git', true),
+    new Repo('Ethereum Android sample', 'https://github.com/p-acs/ethereum-android-sample.git', true),
 ]

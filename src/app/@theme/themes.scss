@@ -39,6 +39,10 @@ $nb-themes: nb-register-theme((
   // Dashboard
   dashboard-bg: $primary-gray,
   dashboard-item-bg: white,
+  dashboard-item-hover-bg: rgb(253, 253, 253),
+  dashboard-item-height:70px,
+  dashboard-item-row-gap:10px,
+  dashboard-item-col-gap:20px,
   dashboard-item-text-color: $dark-gray,
   dashboard-item-border-color: $secondary-gray,
   dashboard-item-font-size: 14px,
@@ -49,6 +53,7 @@ $nb-themes: nb-register-theme((
   dashboard-section-btm-margin: 30px,
 
   dashboard-popover-bg: $tsp-black,
+  dashboard-popover-radius: 5px,
 
 
 ), morpheustheme, default);

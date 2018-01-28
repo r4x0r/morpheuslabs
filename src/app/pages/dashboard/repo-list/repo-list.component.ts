@@ -14,7 +14,7 @@ export class RepoListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    if(this.type == 'sample-repo'){
+    if (this.type == 'sample-repo') {
       this.repoList = sampleRepoList
     } else {
       this.repoList = repoList

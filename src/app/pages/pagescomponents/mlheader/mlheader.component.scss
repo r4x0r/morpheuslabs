@@ -38,31 +38,42 @@
     }
   }
 
-  .header-action-button
+
+
+  .header-action-button-group
   {
-    height: nb-theme(header-height);
+    padding: 0;
     background: $primary-blue;
+    height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 0.875rem 1.625rem;
-    color: white;
-
+    flex-direction: row;
     margin-left: auto;
+    width: 200px;
 
-    &:hover
+    .header-action-button
     {
-      text-decoration: none;
-      background: $secondary-blue;
+      height: 100%;
+      background: $primary-blue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 25%;
+  
+      color: white;
+      border-right: 1px solid $secondary-blue;
+  
+      &:hover
+      {
+        text-decoration: none;
+        background: $secondary-blue;
+      }
+  
+      i
+      {
+        font-size: 2rem;
+      }
     }
-
-    i
-    {
-      font-size: 1.625rem;
-      margin-right: 0.625rem; 
-    }
-
   }
+
 }
 

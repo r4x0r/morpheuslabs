@@ -31,7 +31,7 @@
         flex-direction: column;
         align-items: center;
         background: white;
-        border-radius: 5px;
+        border-radius: nb-theme(dashboard-popover-radius);
         padding-left: 3vw;
         padding-right: 3vw;
     }

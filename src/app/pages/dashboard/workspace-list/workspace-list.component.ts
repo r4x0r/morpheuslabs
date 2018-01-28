@@ -8,7 +8,7 @@ import { WorkspaceService } from '../../../services/workspace.service'
   styleUrls: ['./workspace-list.component.scss']
 })
 export class WorkspaceListComponent implements OnInit {
-  
+
   workspaceList: Workspace[]
   showPopover: boolean = false;
 
@@ -19,18 +19,18 @@ export class WorkspaceListComponent implements OnInit {
   ngOnInit() {
     this.workspaceList = this.workspaceService.getWorkspaces()
     this.workspaceService.createWorkshopBtnClicked
-    .subscribe(
+      .subscribe(
       () => {
         this.showPopover = true
       }
-    );
+      );
   }
 
-  onPlusBtnClicked(){
+  onPlusBtnClicked() {
     this.showPopover = true
   }
 
-  dismissPopover(){
+  dismissPopover() {
     this.showPopover = false
   }
 

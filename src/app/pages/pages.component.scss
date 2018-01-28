@@ -12,6 +12,12 @@
     padding: nb-theme(layout-padding);
   }
   
+  .menu-sidebar{
+    .scrollable::-webkit-scrollbar {
+      display: none;
+    }
+  
+  }
   
   nb-sidebar
   {

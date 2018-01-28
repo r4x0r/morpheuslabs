@@ -7,6 +7,6 @@ export const environment = {
 	production: false,
 	realm: 'che',
 	clientId: 'che-public',
-	keycloakBaseUrl: 'http://wsdev.campflex.com:5050/auth',
-	serviceBaseUrl: 'http://wsdev.campflex.com:8080/api'
+	keycloakBaseUrl: 'http://bpaas.morpheuslabs.io:5050/auth',
+	serviceBaseUrl: 'http://bpaas.morpheuslabs.io/api'
 };

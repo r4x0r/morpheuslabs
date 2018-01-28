@@ -11,15 +11,31 @@ import { WindowService } from '../../../../util/window.service'
 export class WorkspaceItemComponent implements OnInit {
   @Input() workspace: Workspace
   nativeWindow: any
-  constructor(private windowService: WindowService) { 
+  showInfo: boolean = false
+  constructor(private windowService: WindowService) {
     this.nativeWindow = windowService.getNativeWindow();
   }
 
   ngOnInit() {
   }
 
-  onWorkshopSelect(){
+  onWorkshopSelect() {
     var newWindow = this.nativeWindow.open(this.workspace.link);
+  }
+
+  onInfoTapped(event) {
+    event.stopPropagation();
+    this.showInfo = true
+    console.log('onInfoTapped')
+  }
+
+  onDeleteTapped(event) {
+    event.stopPropagation();
+  }
+
+  onInfoMaskTapped(event) {
+    event.stopPropagation();
+    this.showInfo = false
   }
 
 }
