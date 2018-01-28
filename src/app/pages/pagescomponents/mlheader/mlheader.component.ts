@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NbMenuService, NbSidebarService } from '@nebular/theme';
-import { WorkspaceService } from '../../../services/workspace.service'
+import { WorkspaceService } from '../../../services/workspace.service';
+import { KeycloakService } from '../../../shared/keycloak/keycloak.service';
 
 @Component({
   selector: 'ml-header',
@@ -9,7 +10,7 @@ import { WorkspaceService } from '../../../services/workspace.service'
 })
 export class MlheaderComponent implements OnInit {
 
-  constructor(private sidebarService: NbSidebarService,
+  constructor(private sidebarService: NbSidebarService, private ks: KeycloakService,
     private menuService: NbMenuService, private workspaceService: WorkspaceService) { }
 
   ngOnInit() {
@@ -22,6 +23,10 @@ export class MlheaderComponent implements OnInit {
 
   createBtnClicked() {
     this.workspaceService.createWorkshopBtnClicked.emit()
+  }
+
+  logoutTapped() {
+    this.ks.logout()
   }
 
 }
