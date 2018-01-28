@@ -1,4 +1,4 @@
-export interface Application
-{
+export interface Application {
   name: String,
+  appIcon: String
 }
