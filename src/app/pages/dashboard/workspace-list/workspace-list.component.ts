@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Workspace } from '../../../model/workspace.model'
 import { WorkspaceService } from '../../../services/workspace.service'
+import { Observable } from 'rxjs/Rx';
+import { IntervalObservable } from "rxjs/observable/IntervalObservable";
 
 @Component({
   selector: 'app-workspace-list',
@@ -11,19 +13,34 @@ export class WorkspaceListComponent implements OnInit {
 
   workspaceList: Workspace[]
   showPopover: boolean = false;
+  alive: boolean = false;
 
   constructor(
     private workspaceService: WorkspaceService,
-  ) { }
+  ) {
+    this.alive = true;
+  }
 
   ngOnInit() {
-    this.workspaceList = this.workspaceService.getWorkspaces()
+
+    // IntervalObservable.create(3000)
+    //   .takeWhile(() => this.alive) // only fires when component is alive
+    //   .subscribe(() => {
+    //     this.workspaceService.getWorkspaces()
+    //   });
+
+    this.workspaceService.workshopRefreshed.subscribe((workspaces: Workspace[]) => {
+      this.workspaceList = workspaces
+    })
+
     this.workspaceService.createWorkshopBtnClicked
       .subscribe(
       () => {
         this.showPopover = true
       }
       );
+
+    this.workspaceService.getWorkspaces()
   }
 
   onPlusBtnClicked() {

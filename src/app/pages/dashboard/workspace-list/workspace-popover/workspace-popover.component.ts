@@ -12,7 +12,7 @@ export class WorkspacePopoverComponent implements OnInit {
   @ViewChild('nameInput') nameInputRef: ElementRef;
   currentStep: number = 0;
   name: string = 'test workspace';
-  
+
   blockchains: string[] = ['Ethereum', 'HyperLedger Fabric', 'Multi Chain']
   appTypes: string[] = ['Chaincode', 'Blockchain client application']
   languages: string[] = ['JavaScript', 'Go']
@@ -28,15 +28,15 @@ export class WorkspacePopoverComponent implements OnInit {
   ngOnInit() {
   }
 
-  updateOption(input:{type:string, index:number}){
-    switch(input.type){
-      case 'blockchain': 
+  updateOption(input: { type: string, index: number }) {
+    switch (input.type) {
+      case 'blockchain':
         this.selectedChain = this.blockchains[input.index]
         break
-      case 'appType': 
+      case 'appType':
         this.selectedType = this.appTypes[input.index]
         break
-      case 'environment': 
+      case 'environment':
         this.selectedEnv = this.environments[input.index]
         break
       default:
@@ -44,9 +44,9 @@ export class WorkspacePopoverComponent implements OnInit {
     }
   }
 
-  onNextBtnClicked(){
-    switch(this.currentStep){
-      case 0: 
+  onNextBtnClicked() {
+    switch (this.currentStep) {
+      case 0:
         //this.name = this.nameInputRef.nativeElement.value;
         break
       default:
@@ -55,16 +55,16 @@ export class WorkspacePopoverComponent implements OnInit {
     this.currentStep += 1
   }
 
-  onBackBtnClicked(){
+  onBackBtnClicked() {
     this.currentStep -= 1
   }
 
 
-  onConfirmBtnClicked(){
-    this.confirmBtnClicked.emit(new Workspace(this.name,'STOPPED','','','',''))
+  onConfirmBtnClicked() {
+    this.confirmBtnClicked.emit(new Workspace('', this.name, 'STOPPED', '', '', '', ''))
   }
 
-  onCancelBtnClicked(){
+  onCancelBtnClicked() {
     this.cancelBtnClicked.emit()
   }
 

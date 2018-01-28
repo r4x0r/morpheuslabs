@@ -4,6 +4,8 @@ import { User } from '../model/user.model'
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { UserService } from './user.service'
 import { environment } from '../../environments/environment';
+import { Observable } from 'rxjs/Rx';
+import { IntervalObservable } from "rxjs/observable/IntervalObservable";
 
 @Injectable()
 export class WorkspaceService {
@@ -20,6 +22,8 @@ export class WorkspaceService {
         // new Workspace('CargoChain','runnning'),
     ]
     createWorkshopBtnClicked = new EventEmitter();
+    workshopRefreshed = new EventEmitter();
+    private statusCheckCompleted = new EventEmitter();
 
     getWorkspaces() {
         this.workspaces = []
@@ -30,6 +34,7 @@ export class WorkspaceService {
                 console.log(ws)
                 this.workspaces.push(
                     new Workspace(
+                        ws['id'],
                         ws['config'].name,
                         ws['status'],
                         ws['links'].ide,
@@ -38,11 +43,48 @@ export class WorkspaceService {
                         ws['namespace']
                     ))
             })
-            console.log(this.workspaces)
         });
-        return this.workspaces
-        //return this.workspaces.slice();
+        this.workshopRefreshed.emit(this.workspaces)
     }
+
+    stopWorkspace(id: string) {
+        this.http.delete(environment.serviceBaseUrl + '/workspace/' + id + '/runtime').subscribe(res => {
+            this.getWorkspaces()
+        })
+        let subscriber = IntervalObservable.create(2000).subscribe(() => {
+            this.http.get(environment.serviceBaseUrl + '/workspace/' + id).subscribe(res => {
+                let json = res as JSON
+                console.log(json['status'])
+                if (json['status'] == 'STOPPED') {
+                    subscriber.unsubscribe()
+                    this.getWorkspaces()
+                }
+            })
+        });
+    }
+
+    startWorkspace(id: string) {
+        this.http.post(environment.serviceBaseUrl + '/workspace/' + id + '/runtime', '').subscribe(res => {
+            this.getWorkspaces()
+        })
+        let subscriber = IntervalObservable.create(2000).subscribe(() => {
+            this.http.get(environment.serviceBaseUrl + '/workspace/' + id).subscribe(res => {
+                let json = res as JSON
+                console.log(json['status'])
+                if (json['status'] == 'RUNNING') {
+                    subscriber.unsubscribe()
+                    this.getWorkspaces()
+                }
+            })
+        });
+    }
+
+    // checkWorkspace(id: string) {
+    //     this.http.get(environment.serviceBaseUrl + '/workspace/' + id).subscribe(res => {
+    //         let json = res as JSON
+    //         this.statusCheckCompleted.emit(json)
+    //     })
+    // }
 
     addWorkspace(workspace: Workspace) {
         this.workspaces.push(workspace)

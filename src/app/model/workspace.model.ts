@@ -1,5 +1,6 @@
 export class Workspace {
     constructor(
+        public id: string,
         public name: string,
         public status: string,
         public link: string,
@@ -14,5 +15,5 @@ export class Workspace {
         // envType
         // prjDes
         // prjSrc
-    ){}
-  }
+    ) { }
+}

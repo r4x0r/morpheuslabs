@@ -3,8 +3,9 @@
   <div class="name">
     {{workspace.name}}
   </div>
+  <div class="status-icon-{{workspace.status}}" [ngClass]="{'animated infinite flash': workspace.status != 'STOPPED'}"></div>
   <div class="btn-group">
-    <div class="status-icon-{{workspace.status}}" [ngClass]="{'animated infinite flash': workspace.status == 'RUNNING'}"></div>
+    <button class="action-btn-{{workspace.status}} btn-light" (click)="onActionTapped($event)"></button>
     <button class="info-btn" (click)="onInfoTapped($event)"></button>
     <button class="delete-btn btn-light" (click)="onDeleteTapped($event)"></button>
   </div>
