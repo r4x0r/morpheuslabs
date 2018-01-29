@@ -24,4 +24,4 @@ const routes: Routes = [{
     NewsComponent
   ]
 })
-export class MembershipModule { }
+export class NewsModule { }
